@@ -6,7 +6,13 @@ set(CMAKE_C_STANDARD 23)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/$<CONFIGURATION>")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/$<CONFIGURATION>")
 
-add_subdirectory(vendored/SDL EXCLUDE_FROM_ALL)
+if(NOT TARGET SDL3::SDL3)
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/vendored/SDL/CMakeLists.txt")
+        add_subdirectory(vendored/SDL EXCLUDE_FROM_ALL)
+    else()
+        find_package(SDL3 REQUIRED)
+    endif()
+endif()
 
 add_library(2d_engine
         src/vector2d.c
