@@ -16,16 +16,16 @@ endif()
 
 add_library(2d_engine
         src/vector2d.c
-        include/vector2d.h
+        include/2d_engine/vector2d.h
         src/rigidbody2d.c
-        include/rigidbody2d.h
+        include/2d_engine/rigidbody2d.h
         src/game.c
-        include/game.h
+        include/2d_engine/game.h
         src/string.c
-        include/string.h
+        include/2d_engine/string.h
 )
 
-add_library(DLeuthold::SDL2DEngine ALIAS 2d_engine)
+add_library(DLeuthold::2DEngine ALIAS 2d_engine)
 
 target_link_directories(2d_engine PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
@@ -35,5 +35,5 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
     add_executable(2d_engine_demo src/main.c)
 
     # Link the internal alias
-    target_link_libraries(2d_engine_demo PRIVATE DLeuthold::SDL2DEngine)
+    target_link_libraries(2d_engine_demo PRIVATE DLeuthold::2DEngine)
 endif()

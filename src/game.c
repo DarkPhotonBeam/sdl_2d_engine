@@ -2,7 +2,7 @@
 // Created by dan on 11/17/25.
 //
 
-#include "../include/game.h"
+#include "../include/2d_engine/game.h"
 
 #include <math.h>
 #include <SDL3/SDL.h>
