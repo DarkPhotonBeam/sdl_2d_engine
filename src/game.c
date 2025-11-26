@@ -145,9 +145,8 @@ void Game_Render(const Game_AppState *state, const int clear_screen) {
     Game_RenderObjects(state);
 }
 
-SDL_Texture *Game_TextureFromPNG(SDL_Renderer *renderer, const char *path) {
+SDL_Texture *Game_CreateTextureFromPNG(SDL_Renderer *renderer, const char *path) {
     SDL_Surface *surf = SDL_LoadPNG(path);
-    SDL_Log("Guadalajara: %s", path);
     SDL_Texture *text = SDL_CreateTextureFromSurface(renderer, surf);
     SDL_DestroySurface(surf);
     return text;
