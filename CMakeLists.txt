@@ -23,6 +23,8 @@ add_library(2d_engine
         include/2DEngine/game.h
         src/string.c
         include/2DEngine/string.h
+        src/hashmap.c
+        include/2DEngine/hashmap.h
 )
 
 add_library(DLeuthold::2DEngine ALIAS 2d_engine)
