@@ -27,7 +27,7 @@ add_library(2d_engine
 
 add_library(DLeuthold::2DEngine ALIAS 2d_engine)
 
-target_link_directories(2d_engine PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
+target_include_directories(2d_engine PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 target_link_libraries(2d_engine PUBLIC SDL3::SDL3 PRIVATE m)
 
