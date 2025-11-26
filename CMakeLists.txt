@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.31)
-project(sdl_velocity_verlet C)
+project(sdl_2d_engine C)
 
 set(CMAKE_C_STANDARD 23)
 
@@ -16,13 +16,13 @@ endif()
 
 add_library(2d_engine
         src/vector2d.c
-        include/2d_engine/vector2d.h
+        include/2DEngine/vector2d.h
         src/rigidbody2d.c
-        include/2d_engine/rigidbody2d.h
+        include/2DEngine/rigidbody2d.h
         src/game.c
-        include/2d_engine/game.h
+        include/2DEngine/game.h
         src/string.c
-        include/2d_engine/string.h
+        include/2DEngine/string.h
 )
 
 add_library(DLeuthold::2DEngine ALIAS 2d_engine)

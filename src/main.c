@@ -2,7 +2,7 @@
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 
-#include "../include/2d_engine/game.h"
+#include "../include/2DEngine/game.h"
 
 #define WINDOW_FLAGS (0) // SDL_WINDOW_FULLSCREEN
 

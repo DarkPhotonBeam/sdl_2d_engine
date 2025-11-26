@@ -1,4 +1,4 @@
-#include "../include/2d_engine/string.h"
+#include "../include/2DEngine/string.h"
 
 #include <stdio.h>
 #include <stdlib.h>
