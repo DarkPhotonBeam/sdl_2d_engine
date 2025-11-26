@@ -19,7 +19,7 @@ String *String_Create();
  * @param cstr Zero-terminated C string
  * @return Pointer to string with content corresponding to cstr, must be freed with string_destroy at some point
  */
-String *String_FromCstr(const char *cstr);
+String *String_CreateFromCstr(const char *cstr);
 
 /**
  * @brief Append a string to another string

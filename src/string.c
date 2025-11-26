@@ -41,7 +41,7 @@ void string_ensure_cap(String *s, const size_t cap) {
     }
 }
 
-String *String_FromCstr(const char *cstr) {
+String *String_CreateFromCstr(const char *cstr) {
     const size_t len = strlen(cstr);
     String *s = String_Create();
     string_ensure_cap(s, len + 1);
